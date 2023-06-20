@@ -1,10 +1,12 @@
+# Verify Role of ArcGIS Data Stores (Relational) in HA - Primary or Secondary
+
 import requests
 from getpass import getpass
 
 # Prompts the user to enter the portal URL, server URL, username and password
-age_dns = input('Enter AGE DNS: ')
-portal_url = f'https://{age_dns}/portal' # Only the name of the server where the WA is located is required, e.g. server.domain.local
-server_url = f'https://{age_dns}/server' # Only the name of the server where the WA is located is required, e.g. server.domain.local
+age_dns = input('Enter AGE DNS: ') # Only the name of the server where the WA is located is required, e.g. server.domain.local
+portal_url = f'https://{age_dns}/portal' 
+server_url = f'https://{age_dns}/server'
 username = input('Enter username: ') # Portal Admin user
 password = getpass('Enter password: ')
 
@@ -25,7 +27,7 @@ token = response.json()['token']
 
 # Specify the name of the ArcGIS Data Store (Relational)
 datastore_name = input('Enter the name of the ArcGIS Data Store relational: ') # Only the last values e.g ABC12345 for AGSDataStore_ds_ABC12345
-# https://server.domain.local/wa_server/admin/data/items/enterpriseDatabases
+# Check name here https://server.domain.local/wa_server/admin/data/items/enterpriseDatabases
 
 # Information about ArcGIS Data Store servers is maintained using the server URL
 machines_url = f'{server_url}/admin/data/items/enterpriseDatabases/AGSDataStore_ds_{datastore_name}/machines'
