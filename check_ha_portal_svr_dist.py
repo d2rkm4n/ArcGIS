@@ -6,7 +6,7 @@ from getpass import getpass
 # Define the portal URL and credentials
 portal_dns = input('Enter portal DNS: ') # Only the name of the server where the WA is located is required, e.g. server.domain.local
 portal_url = f'https://{portal_dns}/portal'
-username = input('Enter username: ')
+username = input('Enter username: ') # Portal Admin user
 password = getpass('Enter password: ')
 
 # Generate the access token
