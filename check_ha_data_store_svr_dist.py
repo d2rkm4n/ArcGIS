@@ -23,7 +23,7 @@ response = requests.post(token_url, data=token_params)
 response.raise_for_status()
 token = response.json()['token']
 
-# Specify the name of the ArcGIS Data Store relational
+# Specify the name of the ArcGIS Data Store (Relational)
 datastore_name = input('Enter the name of the ArcGIS Data Store relational: ') # Only the last values e.g ABC12345 for AGSDataStore_ds_ABC12345
 # https://server.domain.local/wa_server/admin/data/items/enterpriseDatabases
 
