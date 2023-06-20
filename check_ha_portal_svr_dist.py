@@ -37,6 +37,7 @@ machines = response.json()['machines']
 
 # Prints information about Portal (server distribution)
 for machine in machines:
+    print()
     print('Machine name:', machine['machineName'])
     print('Role:', machine['role'])
     print()
